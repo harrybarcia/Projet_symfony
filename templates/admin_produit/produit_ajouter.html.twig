@@ -1,0 +1,32 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{parent()}} | Ajouter produits {% endblock %}
+
+{% block h1   %}Gestion des produits | ajouter{% endblock %}
+
+
+{% block body %}
+{# 1ere solution #}
+
+<a class="btn btn-info" href="{{path("produit_afficher")}}">Retour à la gestion des produits<a>
+{# 1ere solution
+{{form(formProduit)}}  form c'est une fonction twig#} 
+
+
+{{form_start(formProduit)}} {#ouverture du formulaire#}
+{#ouverture du formulaire#}
+<div class="row">
+    <div class="col-md-4">{{form_row(formProduit.titre)}}</div>
+    <div class="col-md-8">{{form_row(formProduit.prix)}}</div>
+</div>
+{#on appelle le formulaire et #}
+
+
+
+{# <input type="submit" value="Ajouter" class="btn btn-dark col-md-12">
+ #}
+ 
+ {{form_end(formProduit)}} {#fermeture du formulaire#}
+
+
+{% endblock %}

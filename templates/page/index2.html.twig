@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello pageController!{% endblock %}
+
+{% block body %}
+
+
+<h1> Bonjour, je m'appelle {{prenomTwig}}</h1>
+
+{% if ageTwig>=18%}
+    <p>majeur</p>
+
+{% else %}
+<p>mineur</p>
+
+{% endif %}    
+{% endblock %}
+{# commentaire
+{{:interpolation : variable ou les fonctions twig
+{%%} condition boucle block
+
+}}
+
+
+
+#}

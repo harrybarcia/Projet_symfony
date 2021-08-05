@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{parent()}} | Afficher produits {% endblock %}
+{% block h1  %}Gestion des produits{% endblock %}
+
+
+{% block body %}
+
+<a class="btn btn-success" href="{{path('produit_ajouter')}}">ajouter un produit<a>
+
+    {% if produits %}
+    
+    {% else %}
+            <h4>Il n'y a aucun produit pour le moment</h4>
+        {% endif %}
+
+{% endblock %}

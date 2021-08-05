@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{parent()}} | Catalogue {% endblock %}
+
+{% block stylesheets %}
+    
+{% endblock %}
+
+{% block h1  %}Catalogue{% endblock %}
+
+{% block body %}
+
+    {% if produits %}
+    
+    {% else %}
+        <h4>Il n'y a aucun produit pour le moment</h4>
+{% endif %}
+
+{% endblock %}
